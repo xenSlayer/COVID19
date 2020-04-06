@@ -38,8 +38,14 @@ class _HomePageState extends State<HomePage> {
                         Center(child: Text('COVID-19', 
                         style: TextStyle(fontSize: scaler.getTextSize(19), color: Colors.purple, fontFamily: 'TitanOne', letterSpacing: 3))),
                         SizedBox(height: scaler.getHeight(1)),                                                                      
-                        Text('Go Corona, Corona go', style: 
-                        TextStyle(letterSpacing: 2, fontSize: scaler.getTextSize(11), color: Colors.black, fontWeight: FontWeight.bold),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(Icons.speaker),
+                            Text('Go Corona, Corona go', style: 
+                            TextStyle(letterSpacing: 2, fontSize: scaler.getTextSize(11), color: Colors.black, fontWeight: FontWeight.bold),),
+                          ],
+                        ),
                         SizedBox(height: scaler.getHeight(6)),                        
                         Text('Tips', style: TextStyle(
                                   fontSize: scaler.getHeight(1.8)

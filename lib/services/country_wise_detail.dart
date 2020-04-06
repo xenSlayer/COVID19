@@ -8,12 +8,13 @@ class WorldWide{
   List<String> confirmed = [];
   List<String> deaths = [];
   List<String> province = [];
-  
+  int responseCode;
 
   Future <void> getFlag() async{
     
     Response response = await get('https://coronavirus-tracker-api.herokuapp.com/v2/locations');
-    Map data = jsonDecode(response.body);    
+    Map data = jsonDecode(response.body);
+    responseCode = response.statusCode;
     for(int i = 0 ; i < 252; i++){
       String flag = data['locations'][i]['country_code'];
       int confirm = data['locations'][i]['latest']['confirmed'];
@@ -25,14 +26,10 @@ class WorldWide{
       flags.add(flag);
 
       int.parse(confirm.toString());
-      String confirmx = '$confirm';
-      confirmed.add(confirmx);
+      confirmed.add('$confirm');
 
       int.parse(deathss.toString());
-      String deathsx = '$deathss';
-      deaths.add(deathsx);
-
-      
+      deaths.add('$deathss');      
     }
   }
 }

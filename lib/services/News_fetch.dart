@@ -28,7 +28,6 @@ class NewsFetch{
       String urlx = data['articles'][i]['url'];
       url.add(urlx);
 
-    }
-   print(author); 
+    }   
   }
 }
