@@ -27,7 +27,7 @@ class NewsCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12), 
-          color: Colors.lightGreen.withOpacity(1), 
+          color: Colors.blue.withOpacity(0.5), 
         ),
         padding: EdgeInsets.all(20),        
         child: Column(          

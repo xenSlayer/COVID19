@@ -24,7 +24,7 @@ class CardItems extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
-            color: Colors.cyan.withOpacity(0.8),
+            color: deaths == null ? Colors.blue :Colors.cyan.withOpacity(0.8),
             borderRadius: BorderRadius.circular(12),          
           ),
           child: Column(
